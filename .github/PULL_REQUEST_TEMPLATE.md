@@ -1,15 +1,42 @@
-`[IMPORTANTE: El contenido de las secciones debe llenarse en INGLÉS. Este aviso entre corchetes debe borrarse antes de enviar la Pull Request]`
+## Summary
 
-📝 **1. ¿Qué hace este cambio?**
+<!-- Provide a brief summary of the changes in this PR. -->
 
-🎯 **2. ¿Por qué se hace este cambio?**
+## Type of Change
 
-🔍 **3. ¿Cómo verificar el cambio?**
-1. 
-2. 
-3. 
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Refactor
+- [ ] Documentation update
+- [ ] Test
+- [ ] Other (please describe)
 
-✅ **4. Checklist de control**
-- [ ] Mi código funciona.
-- [ ] Hice una revisión rápida de mis propios cambios.
-- [ ] La documentación relevante fue actualizada (si aplica).
+## Related Issues
+
+<!-- Link to any related issues using #issue-number. -->
+
+## How Has This Been Tested?
+
+<!-- Describe the tests you ran and the devices you tested on. -->
+
+- [ ] Unit tests
+- [ ] Integration tests
+- [ ] Manual testing
+
+## Checklist
+
+- [ ] My code follows the project's style guidelines
+- [ ] I have performed a self-review of my code
+- [ ] I have commented my code where necessary
+- [ ] I have updated the documentation accordingly
+- [ ] My changes generate no new warnings
+- [ ] Branch name follows naming conventions
+- [ ] Commit messages follow conventional commits
+
+## Screenshots (if applicable)
+
+<!-- Add screenshots to help explain your changes. -->
+
+## Additional Notes
+
+<!-- Any additional information that would be helpful for reviewers. -->
