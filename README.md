@@ -1,136 +1,140 @@
-
-# dabetai AI API - API de inteligencia artificial para predicción de complicaciones diabéticas
-
-API REST que expone los modelos de machine learning para la predicción de complicaciones diabéticas tipo 1 (retinopatía, nefropatía, neuropatía, pie diabético).
+# dabetai — AI Inference API
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" alt="Python version">
-  <img src="https://img.shields.io/badge/FastAPI-0.95-green?logo=fastapi" alt="FastAPI version">
-  <img src="https://img.shields.io/badge/PyTorch-2.x-red?logo=pytorch" alt="PyTorch version">
-  <img src="https://img.shields.io/badge/scikit-learn-1.3-blue?logo=scikitlearn" alt="scikit-learn version">
-  <img src="https://img.shields.io/badge/Uvicorn-0.23-green?logo=uvicorn" alt="Uvicorn version">
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-0.95-009688?logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/scikit_learn-1.3-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/MongoDB-7.0-47A248?logo=mongodb&logoColor=white" alt="MongoDB">
+</p>
+
+<p align="center">
+  <em>Dedicated REST API for AI model inference — processing real-time biometric data to deliver risk predictions for diabetes complications.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/dabetai-org/ai-api">Repository</a>
+  ·
+  <a href="https://github.com/dabetai-org/ai-api/issues">Report Bug</a>
+  ·
+  <a href="https://chrisssp.vercel.app/assets/docs/papers/Prevenci%C3%B3n-de-Riesgos-de-la-Diabetes-Mediante-una-Plataforma-Inteligente-de-Monitorizaci%C3%B3n-y-Predicci%C3%B3n-de-Complicaciones-con-Inteligencia-Artificial.pdf">Research Paper</a>
+</p>
+
+<p align="center">
+  <a href="README.md">🇬🇧 English</a> · <a href="README.es.md">🇪🇸 Español</a>
 </p>
 
 ---
 
-## 🧠 ¿Qué es dabetai AI API?
+## About dabetai
 
-**dabetai AI API** es la API que ofrece los servicios de inteligencia artificial para la plataforma dabetai, brindando predicciones de riesgo para complicaciones diabéticas tipo 1, basados en modelos de machine learning entrenados con datos clínicos y biomédicos.
+**dabetai** is a comprehensive preventive ecosystem for diabetes that predicts complications like retinopathy, nephropathy, neuropathy, and diabetic foot before they become irreversible.
 
----
+This repository contains the **AI Inference API** — a dedicated FastAPI service that exposes trained machine learning models through REST endpoints for real-time risk prediction of:
 
-## ✨ Funcionalidades
+- Diabetic Retinopathy
+- Diabetic Nephropathy
+- Diabetic Neuropathy
+- Diabetic Foot
 
-- ⚡ **Predicciones rápidas** mediante endpoints REST  
-- 🤖 Modelos basados en **scikit-learn** y **PyTorch**  
-- 🔒 Seguridad básica con autenticación (por implementar o configurar)  
-- 🧪 Endpoints para pruebas y validación de modelos  
-- 📊 Respuesta en JSON con métricas y probabilidades de riesgo  
+### Ecosystem
 
----
+| Component | Repository | Stack |
+|-----------|-----------|-------|
+| **AI Inference API** (this) | [dabetai-org/ai-api](https://github.com/dabetai-org/ai-api) | FastAPI, Python 3.11, MongoDB |
+| **Mobile App** | [dabetai-org/mobile-app](https://github.com/dabetai-org/mobile-app) | React Native 0.79, Expo 53, Tailwind CSS |
+| **Web Portal** | [dabetai-org/web-app](https://github.com/dabetai-org/web-app) | Angular 19, Tailwind CSS |
+| **Core API** | [dabetai-org/api](https://github.com/dabetai-org/api) | NestJS 11, PostgreSQL, Prisma |
+| **AI Models** | [dabetai-org/ai-models](https://github.com/dabetai-org/ai-models) | Python, scikit-learn, XGBoost, PyTorch |
+| **Landing** | [dabetai-org/landing](https://github.com/dabetai-org/landing) | Astro, Tailwind CSS |
 
-## 🛠 Tecnologías
+## Features
 
-- **Python 3.11+**  
-- **FastAPI** para API REST rápida y moderna  
-- **scikit-learn** para modelos clásicos de machine learning  
-- **PyTorch** para modelos deep learning  
-- **Uvicorn** como servidor ASGI rápido y eficiente  
+- **Fast Predictions** — REST endpoints for real-time risk scoring
+- **Multiple Models** — scikit-learn and PyTorch based predictions
+- **Complication Coverage** — Retinopathy, Nephropathy, Neuropathy, Diabetic Foot
+- **JSON Responses** — Risk metrics and probability scores
+- **Model Validation** — Endpoints for testing and validation
 
----
+## Quick Start
 
-## ⚡ Instalación rápida
+### Prerequisites
 
-### Prerrequisitos
+- Python 3.11+
+- pip
 
-- **Python 3.11+**  
-- **pip** (gestor de paquetes Python)  
-
-### Pasos
-
-1. **Clonar repositorio**
-
-```bash
-git clone https://github.com/aleor25/dabetai-aiapi.git
-cd dabetai-aiapi
-````
-
-2. **Crear entorno virtual**
+### Setup
 
 ```bash
+git clone https://github.com/dabetai-org/ai-api.git
+cd ai-api
 python -m venv env
-```
-
-3. **Activar entorno virtual**
-
-* En Windows (PowerShell):
-
-```powershell
-.\env\Scripts\Activate.ps1
-```
-
-* En Windows (cmd):
-
-```cmd
-.\env\Scripts\activate.bat
-```
-
-* En Linux/macOS:
-
-```bash
-source env/bin/activate
-```
-
-4. **Instalar dependencias**
-
-```bash
+source env/bin/activate  # Linux/macOS
 pip install -r requirements.txt
 ```
 
-5. **Ejecutar servidor (modo desarrollo)**
+Run the server:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-La API estará disponible en `http://localhost:8000`
+The API will be available at `http://localhost:8000`
 
----
+## Architecture
 
-## 🏗 Ecosistema dabetai: nuestros repositorios
+```
+┌──────────────────────────────────────────────┐
+│            AI Inference API                   │
+│               FastAPI                         │
+│                                               │
+│  ┌─────────┐  ┌─────────┐  ┌──────────────┐ │
+│  │  Risk   │  │  Model  │  │  Health      │ │
+│  │ Predict │  │  Loader │  │  Check       │ │
+│  └────┬────┘  └────┬────┘  └──────┬───────┘ │
+│       │            │               │         │
+│  ┌────▼────────────▼───────────────▼──────┐  │
+│  │         ML Model Registry              │  │
+│  │    scikit-learn / PyTorch / XGBoost    │  │
+│  └────────────────┬───────────────────────┘  │
+└───────────────────┼─────────────────────────┘
+                    │ Internal
+          ┌─────────┴─────────┐
+          ▼                   ▼
+┌──────────────┐    ┌──────────────┐
+│  MongoDB     │    │  Core API    │
+│  (Features)  │    │  (NestJS)    │
+└──────────────┘    └──────────────┘
+```
 
-dabetai está compuesto por múltiples repositorios especializados:
+## API Endpoints
 
-| Repositorio                                                             | Propósito                   | Estado          |
-| ----------------------------------------------------------------------- | --------------------------- | --------------- |
-| **[dabetai-mobileapp](https://github.com/Fermin-Cardenas/dabetai-mobileapp)** | App para pacientes          | ✅ En desarrollo |
-| **[dabetai-webapp](https://github.com/chrisdev-ts/dabetai-webapp)**     | App web para médicos        | ✅ En desarrollo |
-| **[dabetai-aiapi](https://github.com/aleor25/dabetai-aiapi)**           | API de IA y predicciones    | ✅ En desarrollo |
-| **[dabetai-aimodels](https://github.com/chrisdev-ts/dabetai-aimodels)** | Modelos de machine learning | ✅ En desarrollo |
-| **[dabetai-landing](https://github.com/chrisdev-ts/dabetai-landing)**   | Página de aterrizaje        | ✅ En desarrollo |
-| **[dabetai-api](https://github.com/chrisdev-ts/dabetai-api)**                                                         | API principal del backend   | ✅ En desarrollo |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/predict/retinopathy` | Retinopathy risk prediction |
+| POST | `/api/v1/predict/nephropathy` | Nephropathy risk prediction |
+| POST | `/api/v1/predict/neuropathy` | Neuropathy risk prediction |
+| POST | `/api/v1/predict/diabetic-foot` | Diabetic foot risk prediction |
+| GET | `/health` | Health check |
 
----
+## Contributing
 
-## 🤝 Colaboración interna
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for branch naming, commit conventions, and PR workflow.
 
-Seguimos convenciones específicas para mantener consistencia - consulta [CONTRIBUTING.MD](CONTRIBUTING.MD).
+## License
 
----
+This project is licensed under the GNU General Public License v3.0 — see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Reconocimientos
+## Acknowledgments
 
-Este proyecto fue desarrollado por el equipo de autores:
+**Authors:**
+- Cardenas Cabal Fermín
+- Ortiz Pérez Alejandro — alex03ortizperez@gmail.com
+- Serrano Puertos Jorge Christian — christian.serrano.puertos@gmail.com
 
-* Cardenas Cabal Fermín
-* Ortiz Pérez Alejandro
-* Serrano Puertos Jorge Christian
+**Advisors:**
+- Guarneros Nolasco Luis Rolando
+- Cruz Ramos Nancy Aracely
 
-Con la asesoría y guía conceptual de:
-
-* Guarneros Nolasco Luis Rolando
-* Cruz Ramos Nancy Aracely
-
-Y con el apoyo académico de la
-
-* Universidad Tecnológica del Centro de Veracruz
+**Academic Support:**
+- Universidad Tecnológica del Centro de Veracruz
